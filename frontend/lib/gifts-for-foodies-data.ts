@@ -111,24 +111,74 @@ export const staticMeals = [
 ];
 
 export const sliderItems = [
+  { id: 1, title: 'New York', description: '', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_680,h_456,f_auto,q_auto/v1767901770/foodie/hero/NYC-foodie-gifts.jpg' },
+  { id: 2, title: 'Los Angeles', description: '', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_450,h_310,f_auto,q_auto/cozymeal-events_abcpnf' },
+  { id: 3, title: 'Chicago', description: '', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_680,h_456,f_auto,q_auto/v1767901783/foodie/hero/Chicago-foodie-gifts.jpg' },
+  { id: 4, title: 'San Diego', description: '', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_450,h_310,f_auto,q_auto/v1578658687/Use_for_Los_angeles_d57pvs.jpg' },
+  { id: 5, title: 'San Francisco', description: '', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_680,h_456,f_auto,q_auto/v1767901773/foodie/hero/San-Francisco-foodie-gifts.jpg' },
+  { id: 6, title: 'Austin', description: '', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_450,h_310,f_auto,q_auto/v1650976008/brewery-tours-hero_lhuecn.png' },
+];
+
+export const heroSlides = [
   {
     id: 1,
-    title: 'Popular in NYC',
-    description: 'Top-rated cooking classes in the Big Apple',
-    image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_680,h_456,f_auto,q_auto/v1767901770/foodie/hero/NYC-foodie-gifts.jpg',
+    title: 'Find the Ultimate Foodie Gifts',
+    subtitle: 'Chef-led cooking classes, food tours & culinary experiences for everyone on your list.',
+    cta: 'Shop Gifts',
+    href: '#',
+    image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_1440,h_450,f_auto,q_auto/v1762879358/foodie/gifts-for-foodies.png',
   },
   {
     id: 2,
-    title: 'Chicago Favorites',
-    description: 'Best food experiences in the Windy City',
-    image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_680,h_456,f_auto,q_auto/v1767901783/foodie/hero/Chicago-foodie-gifts.jpg',
+    title: 'Cook Up Romance',
+    subtitle: 'Hands-on couple\'s cooking classes for unforgettable date nights.',
+    cta: 'Cooking for Two',
+    href: '#',
+    image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_1440,h_450,f_auto,q_auto/v1578928078/pink_heart_shaped_macarons_-_3_d9ygik.jpg',
   },
   {
     id: 3,
-    title: 'San Francisco Gems',
-    description: 'Culinary adventures in the Bay Area',
-    image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_680,h_456,f_auto,q_auto/v1767901773/foodie/hero/San-Francisco-foodie-gifts.jpg',
+    title: 'The Ultimate Gift of Choice',
+    subtitle: 'Let them choose their perfect culinary adventure.',
+    cta: 'Gift Cards',
+    href: '#',
+    image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_1440,h_450,f_auto,q_auto/v1767901770/foodie/hero/NYC-foodie-gifts.jpg',
   },
+];
+
+export const promoBadges = [
+  'No expiration on gift cards',
+  'e-Gifts delivered instantly',
+  '1000+ experiences nationwide',
+];
+
+export const recipientCards = [
+  { name: 'Gifts for Couples', slug: 'couples', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_400,h_300,f_auto,q_auto/v1578928078/pink_heart_shaped_macarons_-_3_d9ygik.jpg' },
+  { name: 'Gifts for Him', slug: 'men', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_400,h_300,f_auto,q_auto/v1650976008/brewery-tours-hero_lhuecn.png' },
+  { name: 'Gifts for Her', slug: 'women', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_400,h_300,f_auto,q_auto/v1578928679/red_heart_macaroons_cjs1cz.jpg' },
+  { name: 'Gifts for Kids', slug: 'kids', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_400,h_300,f_auto,q_auto/cozymeal-events_abcpnf' },
+  { name: 'Gifts for Parents', slug: 'parents', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_400,h_300,f_auto,q_auto/v1578658687/Use_for_Los_angeles_d57pvs.jpg' },
+];
+
+export const categoryCards = [
+  { name: 'Cooking Classes', slug: 'cooking-classes', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_400,h_300,f_auto,q_auto/v1578928078/pink_heart_shaped_macarons_-_3_d9ygik.jpg' },
+  { name: 'Food Tours', slug: 'food-tours', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_400,h_300,f_auto,q_auto/v1767901770/foodie/hero/NYC-foodie-gifts.jpg' },
+  { name: 'Private Chefs', slug: 'private-chefs', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_400,h_300,f_auto,q_auto/v1578658687/Use_for_Los_angeles_d57pvs.jpg' },
+  { name: 'Online Classes', slug: 'online-classes', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_400,h_300,f_auto,q_auto/v1591270109/online-mixology_ngwhpe.jpg' },
+  { name: 'Wine Tastings', slug: 'wine-tastings', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_400,h_300,f_auto,q_auto/v1650976008/brewery-tours-hero_lhuecn.png' },
+];
+
+export const howItWorks = [
+  { step: 'Find', title: 'Choose from 1000+ food experiences' },
+  { step: 'Gift', title: 'Send an e-voucher that never expires' },
+  { step: 'Book', title: 'Recipient picks their date & experience' },
+];
+
+export const whyLoveUs = [
+  { title: 'Fully flexible', desc: 'Free exchanges, vouchers never expire' },
+  { title: 'Direct to inbox', desc: 'e-Gifts sent instantly or scheduled' },
+  { title: 'Hand-picked', desc: 'Top-rated chef partners nationwide' },
+  { title: 'Best value', desc: 'Competitive pricing on every experience' },
 ];
 
 export const faqItems = [

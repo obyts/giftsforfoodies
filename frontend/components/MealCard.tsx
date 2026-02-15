@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 export type Meal = {
@@ -17,15 +16,13 @@ export function MealCard({ meal }: { meal: Meal }) {
   return (
     <Link
       href={`#/meal/${meal.slug}`}
-      className="group block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100"
+      className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
     >
       <div className="relative aspect-[450/310] overflow-hidden">
-        <Image
+        <img
           src={meal.image}
           alt={meal.title}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute top-3 left-3 flex gap-1">
           {meal.tags.slice(0, 2).map((tag) => (

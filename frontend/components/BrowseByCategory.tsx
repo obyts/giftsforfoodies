@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { categoryCards } from '@/lib/gifts-for-foodies-data';
+import { buildGiftsForFoodiesUrl } from '@/lib/gifts-for-foodies-url';
 
 export function BrowseByCategory() {
   return (
@@ -12,7 +13,7 @@ export function BrowseByCategory() {
           {categoryCards.map((cat) => (
             <Link
               key={cat.slug}
-              href="#"
+              href={buildGiftsForFoodiesUrl('f_mealtag', cat.slug)}
               className="group block rounded-xl overflow-hidden bg-cozy-gray-50 hover:shadow-md transition-shadow"
             >
               <div className="relative aspect-[4/3]">

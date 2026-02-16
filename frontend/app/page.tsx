@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
+import { CategoryFilters } from '@/components/CategoryFilters';
 import { ExploreLocations } from '@/components/ExploreLocations';
 import { MealsGrid } from '@/components/MealsGrid';
 import { ShopByRecipient } from '@/components/ShopByRecipient';
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <CategoryFilters />
         <ExploreLocations />
         <MealsGrid />
         <ShopByRecipient />

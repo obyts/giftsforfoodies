@@ -1,7 +1,7 @@
 export const categories = [
-  { name: 'Cooking Classes', slug: 'cooking-class-gifts', url: '#' },
-  { name: 'Private Chefs', slug: 'private-chefs', url: '#' },
-  { name: 'Food Tours', slug: 'food-tours', url: '#' },
+  { name: 'Cooking Classes', slug: 'cooking-class-gifts', url: '/gifts-for-foodies?f_mealtag=cooking-class-gifts&filter=1' },
+  { name: 'Private Chefs', slug: 'private-chefs', url: '/gifts-for-foodies?f_mealtag=private-chefs&filter=1' },
+  { name: 'Food Tours', slug: 'food-tours', url: '/gifts-for-foodies?f_mealtag=food-tours&filter=1' },
   { name: 'Hibachi Catering', slug: 'hibachi-gifts', url: '#' },
   { name: 'Online Cooking Classes', slug: 'online-cooking-class-gifts', url: '#' },
   { name: 'Virtual Wine Tastings', slug: 'virtual-wine-tasting-gifts', url: '#' },
@@ -125,7 +125,7 @@ export const heroSlides = [
     title: 'Find the Ultimate Foodie Gifts',
     subtitle: 'Chef-led cooking classes, food tours & culinary experiences for everyone on your list.',
     cta: 'Shop Gifts',
-    href: '#',
+    href: '/gifts-for-foodies',
     image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_1440,h_450,f_auto,q_auto/v1762879358/foodie/gifts-for-foodies.png',
   },
   {
@@ -133,7 +133,7 @@ export const heroSlides = [
     title: 'Cook Up Romance',
     subtitle: 'Hands-on couple\'s cooking classes for unforgettable date nights.',
     cta: 'Cooking for Two',
-    href: '#',
+    href: '/gifts-for-foodies?f_occasion=valentines-day&filter=1',
     image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_1440,h_450,f_auto,q_auto/v1578928078/pink_heart_shaped_macarons_-_3_d9ygik.jpg',
   },
   {
@@ -141,7 +141,7 @@ export const heroSlides = [
     title: 'The Ultimate Gift of Choice',
     subtitle: 'Let them choose their perfect culinary adventure.',
     cta: 'Gift Cards',
-    href: '#',
+    href: '/gifts-for-foodies',
     image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_1440,h_450,f_auto,q_auto/v1767901770/foodie/hero/NYC-foodie-gifts.jpg',
   },
 ];

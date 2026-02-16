@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { recipientCards } from '@/lib/gifts-for-foodies-data';
+import { buildGiftsForFoodiesUrl } from '@/lib/gifts-for-foodies-url';
 
 export function ShopByRecipient() {
   return (
@@ -12,7 +13,7 @@ export function ShopByRecipient() {
           {recipientCards.map((rec) => (
             <Link
               key={rec.slug}
-              href="#"
+              href={buildGiftsForFoodiesUrl('f_recipient', rec.slug)}
               className="group block rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="relative aspect-square">

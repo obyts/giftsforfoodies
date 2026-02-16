@@ -28,7 +28,7 @@ export function MealCard({ meal }: { meal: Meal }) {
           {meal.tags.slice(0, 2).map((tag) => (
             <span
               key={tag}
-              className="px-2 py-1 bg-white/90 rounded text-xs font-medium text-gray-700"
+              className="px-2 py-1 bg-white/90 rounded text-xs font-medium text-cozy-gray-700"
             >
               {tag}
             </span>
@@ -36,17 +36,17 @@ export function MealCard({ meal }: { meal: Meal }) {
         </div>
       </div>
       <div className="p-4">
-        <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition-colors line-clamp-2">
+        <h3 className="font-semibold text-cozy-navy group-hover:text-cozy-orange transition-colors line-clamp-2">
           {meal.title}
         </h3>
-        <p className="text-sm text-gray-500 mt-1">{meal.location}</p>
+        <p className="text-sm text-cozy-gray-600 mt-1">{meal.location}</p>
         <div className="flex items-center justify-between mt-3">
           <div className="flex items-center gap-1">
             <span className="text-yellow-500">★</span>
             <span className="text-sm font-medium">{meal.rating}</span>
-            <span className="text-sm text-gray-400">({meal.reviewsCount})</span>
+            <span className="text-sm text-cozy-gray-600">({meal.reviewsCount})</span>
           </div>
-          <span className="font-bold text-orange-600">From ${meal.price}</span>
+          <span className="font-bold text-cozy-orange">From ${meal.price}</span>
         </div>
       </div>
     </Link>

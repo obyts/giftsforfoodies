@@ -16,7 +16,7 @@ export function Hero() {
 
   return (
     <section className="relative">
-      <div className="relative w-full aspect-[16/5] min-h-[280px] max-h-[450px] bg-gray-900 overflow-hidden">
+      <div className="relative w-full aspect-[16/5] min-h-[280px] max-h-[450px] bg-cozy-gray-800 overflow-hidden">
         {heroSlides.map((s, i) => (
           <div
             key={s.id}
@@ -39,12 +39,12 @@ export function Hero() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
                 {slide.title}
               </h1>
-              <p className="text-lg md:text-xl text-gray-200 mb-6">
+              <p className="text-lg md:text-xl text-white/90 mb-6">
                 {slide.subtitle}
               </p>
               <Link
                 href={slide.href}
-                className="inline-block px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors"
+                className="inline-block px-6 py-3 bg-cozy-orange hover:bg-cozy-orange-dark text-white font-semibold rounded-lg transition-colors"
               >
                 {slide.cta}
               </Link>
@@ -64,9 +64,9 @@ export function Hero() {
           ))}
         </div>
       </div>
-      <div className="bg-white border-b border-gray-100 py-3">
+      <div className="bg-white border-b border-cozy-gray-200 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm text-gray-600">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm text-cozy-gray-600">
             {promoBadges.map((badge) => (
               <span key={badge} className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-500" />

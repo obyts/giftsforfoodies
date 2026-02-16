@@ -1,8 +1,22 @@
 @import "tailwindcss";
 
+@theme {
+  /* Cozymeal brand */
+  --color-cozy-orange: #FF530D;
+  --color-cozy-orange-dark: #E64A0B;
+  --color-cozy-navy: #01011B;
+  --color-cozy-gray-50: #f8f9fa;
+  --color-cozy-gray-100: #f1f3f5;
+  --color-cozy-gray-200: #e9ecef;
+  --color-cozy-gray-600: #495057;
+  --color-cozy-gray-700: #343a40;
+  --color-cozy-gray-800: #212529;
+  --color-cozy-orange-100: #fff0eb;
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, sans-serif;
-  background: #fafafa;
-  color: #1a1a1a;
+  background: var(--color-cozy-gray-50);
+  color: var(--color-cozy-gray-800);
 }

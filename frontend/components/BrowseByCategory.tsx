@@ -5,7 +5,7 @@ export function BrowseByCategory() {
   return (
     <section className="py-12 md:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+        <h2 className="text-2xl md:text-3xl font-bold text-cozy-navy mb-8">
           Browse By Category
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
@@ -13,7 +13,7 @@ export function BrowseByCategory() {
             <Link
               key={cat.slug}
               href="#"
-              className="group block rounded-xl overflow-hidden bg-gray-50 hover:shadow-md transition-shadow"
+              className="group block rounded-xl overflow-hidden bg-cozy-gray-50 hover:shadow-md transition-shadow"
             >
               <div className="relative aspect-[4/3]">
                 <img

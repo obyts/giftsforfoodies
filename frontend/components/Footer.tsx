@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-cozy-navy text-cozy-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
@@ -46,11 +46,11 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <Link href="/" className="text-xl font-bold text-white hover:text-orange-400">
+        <div className="mt-12 pt-8 border-t border-cozy-gray-700 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <Link href="/" className="text-xl font-bold text-white hover:text-cozy-orange">
             Cozymeal
           </Link>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-cozy-gray-600">
             © {new Date().getFullYear()} Cozymeal. All rights reserved.
           </p>
         </div>

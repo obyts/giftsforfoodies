@@ -18,13 +18,13 @@ export function MealsGrid() {
   const [activeLocation, setActiveLocation] = useState('all');
 
   return (
-    <section className="py-12 md:py-16 bg-gray-50">
+    <section className="py-12 md:py-16 bg-cozy-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+          <h2 className="text-2xl md:text-3xl font-bold text-cozy-navy">
             Bestselling Foodie Gift Experiences
           </h2>
-          <Link href="#" className="text-orange-600 hover:text-orange-700 font-medium text-sm">
+          <Link href="#" className="text-cozy-orange hover:text-cozy-orange-dark font-medium text-sm">
             View All Locations →
           </Link>
         </div>
@@ -35,8 +35,8 @@ export function MealsGrid() {
               onClick={() => setActiveLocation(loc.id)}
               className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
                 activeLocation === loc.id
-                  ? 'bg-orange-500 text-white'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
+                  ? 'bg-cozy-orange text-white'
+                  : 'bg-white text-cozy-gray-600 hover:bg-cozy-gray-100'
               }`}
             >
               {loc.name}

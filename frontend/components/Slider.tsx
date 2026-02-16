@@ -8,9 +8,9 @@ export function Slider() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-cozy-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl font-bold text-cozy-navy mb-6">
           Explore by City
         </h2>
         <div className="relative">
@@ -45,7 +45,7 @@ export function Slider() {
                 key={index}
                 onClick={() => setActiveIndex(index)}
                 className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                  index === activeIndex ? 'bg-orange-600' : 'bg-gray-300 hover:bg-gray-400'
+                  index === activeIndex ? 'bg-cozy-orange' : 'bg-cozy-gray-200 hover:bg-cozy-gray-600'
                 }`}
                 aria-label={`Slide ${index + 1}`}
               />

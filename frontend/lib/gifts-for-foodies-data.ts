@@ -285,7 +285,7 @@ export const mealProfileFaqItems = [
   },
   {
     question: 'How long is it valid?',
-    answer: 'Cozymeal vouchers never expire, giving the recipient the freedom to choose and enjoy their experience at their convenience.',
+    answer: 'GiftsForFoodies vouchers never expire, giving the recipient the freedom to choose and enjoy their experience at their convenience.',
   },
   {
     question: 'What types of experiences are included?',
@@ -312,7 +312,7 @@ export const faqItems = [
   },
   {
     question: 'Can I give a cooking class as a gift?',
-    answer: 'Yes! Cozymeal offers gift cards and booking options that make it easy to give cooking classes, food tours, and culinary experiences as gifts. Recipients can choose their preferred date and experience.',
+    answer: 'Yes! GiftsForFoodies offers gift cards and booking options that make it easy to give cooking classes, food tours, and culinary experiences as gifts. Recipients can choose their preferred date and experience.',
   },
   {
     question: 'What makes a good foodie gift?',

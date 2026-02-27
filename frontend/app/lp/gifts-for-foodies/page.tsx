@@ -1,5 +1,5 @@
-﻿export const metadata = {
-  title: 'Gifts for Foodies | Cozymeal',
+export const metadata = {
+  title: 'Gifts for Foodies | GiftsForFoodies',
   description: 'Discover unforgettable gifts for foodies, from chef-led cooking classes and gourmet food tours to chef-curated cookware.',
 };
 

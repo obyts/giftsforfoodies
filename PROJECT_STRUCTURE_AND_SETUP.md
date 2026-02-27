@@ -1,4 +1,4 @@
-# Cozymeal LP — Структура проєкту та інструкція з налаштування
+# GiftsForFoodies LP — Структура проєкту та інструкція з налаштування
 
 ## Огляд
 
@@ -55,7 +55,7 @@ cozymeal-lp/
 
 | Компонент | Опис |
 |-----------|------|
-| **Header** | Логотип Cozymeal, навігація (Gifts for Foodies, Cooking Classes, Food Tours, Gift Cards, Help, Redeem, корзина) |
+| **Header** | Логотип GiftsForFoodies, навігація (Gifts for Foodies, Cooking Classes, Food Tours, Gift Cards, Help, Redeem, корзина) |
 | **Hero** | Повноширинний слайдер з 3 слайдами, автопрокрутка 5 сек, промо-бейджі під слайдером |
 | **ExploreLocations** | Сітка карток міст (New York, LA, Chicago, San Diego, SF, Austin) + "View All" |
 | **MealsGrid** | Таби локацій + сітка карток досвідів (6 meals) |

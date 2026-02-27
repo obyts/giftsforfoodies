@@ -1,4 +1,4 @@
-# Cozymeal LP
+# GiftsForFoodies LP
 
 Landing pages — Laravel + Next.js (Docker)
 

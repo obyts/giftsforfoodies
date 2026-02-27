@@ -1,26 +1,55 @@
+'use client';
+
+import { useRef } from 'react';
 import Link from 'next/link';
 import { cities } from '@/lib/home-page-data';
 
+const GAP = 16; // gap-4
+
 export function ExploreByCity() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const firstCard = el.querySelector('a');
+    const cardWidth = firstCard ? (firstCard as HTMLElement).offsetWidth + GAP : 208;
+    const step = direction === 'left' ? -cardWidth : cardWidth;
+    el.scrollBy({ left: step, behavior: 'smooth' });
+  };
+
   return (
-    <section className="mb-16">
+    <section className="mb-16 overflow-hidden">
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-3xl font-extrabold tracking-tight">Explore by City</h2>
         <div className="flex gap-2">
-          <button type="button" className="p-2 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-all">
+          <button
+            type="button"
+            onClick={() => scroll('left')}
+            className="p-2 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-all"
+            aria-label="Previous cities"
+          >
             <span className="material-symbols-outlined">chevron_left</span>
           </button>
-          <button type="button" className="p-2 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-all">
+          <button
+            type="button"
+            onClick={() => scroll('right')}
+            className="p-2 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-all"
+            aria-label="Next cities"
+          >
             <span className="material-symbols-outlined">chevron_right</span>
           </button>
         </div>
       </div>
-      <div className="flex overflow-x-auto lg:grid lg:grid-cols-6 pb-6 gap-4 no-scrollbar scroll-smooth">
+      <div
+        ref={scrollRef}
+        className="flex overflow-x-auto overflow-y-hidden pb-6 gap-4 no-scrollbar scroll-smooth min-w-0 w-full"
+      >
         {cities.map((city) => (
           <Link
             key={city.name}
             href="#"
-            className="group relative shrink-0 w-48 lg:w-full aspect-[4/5] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
+            className="group relative shrink-0 w-48 md:w-56 aspect-[4/5] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
           >
             <img
               alt={city.name}

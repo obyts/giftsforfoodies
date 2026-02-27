@@ -17,9 +17,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const meal = getMealBySlug(slug);
-  if (!meal) return { title: 'Book | Cozymeal' };
+  if (!meal) return { title: 'Book | GiftsForFoodies' };
   return {
-    title: `Book ${meal.title} | Cozymeal`,
+    title: `Book ${meal.title} | GiftsForFoodies`,
   };
 }
 

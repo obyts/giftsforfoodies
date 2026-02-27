@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
 /**
- * Creates a Stripe PaymentIntent for the booking (Cozymeal-style: amount in dollars, charge on confirm).
+ * Creates a Stripe PaymentIntent for the booking (GiftsForFoodies: amount in dollars, charge on confirm).
  * Requires STRIPE_SECRET_KEY in env.
  */
 export async function POST(request: NextRequest) {
@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
       automatic_payment_methods: { enabled: true },
       metadata: {
         ...metadata,
-        description: metadata.description || 'Cozymeal booking',
+        description: metadata.description || 'GiftsForFoodies booking',
       },
     });
 

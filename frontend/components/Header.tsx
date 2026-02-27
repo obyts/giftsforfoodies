@@ -1,6 +1,8 @@
 'use client';
 
+import { useState, useCallback, useRef } from 'react';
 import Link from 'next/link';
+import { locationMenuRegions } from '@/lib/home-page-data';
 
 const mainNav = [
   { label: 'Experiences', href: '#' },
@@ -15,6 +17,35 @@ const subNav = [
 ];
 
 export function Header() {
+  const [locationOpen, setLocationOpen] = useState(false);
+  const [expandedRegions, setExpandedRegions] = useState<Set<string>>(new Set());
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const clearCloseTimeout = useCallback(() => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+  }, []);
+
+  const openLocation = useCallback(() => {
+    clearCloseTimeout();
+    setLocationOpen(true);
+  }, [clearCloseTimeout]);
+
+  const closeLocation = useCallback(() => {
+    closeTimeoutRef.current = setTimeout(() => setLocationOpen(false), 100);
+  }, []);
+
+  const toggleRegion = useCallback((region: string) => {
+    setExpandedRegions((prev) => {
+      const next = new Set(prev);
+      if (next.has(region)) next.delete(region);
+      else next.add(region);
+      return next;
+    });
+  }, []);
+
   return (
     <header className="sticky top-0 z-50">
       <div className="bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-primary/10 px-4 md:px-10 lg:px-20 py-4">
@@ -64,20 +95,40 @@ export function Header() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-slate-50 dark:bg-black/20 border-b border-slate-100 dark:border-white/5 py-2 px-4 md:px-10 lg:px-20">
-        <div className="max-w-7xl mx-auto flex items-center justify-between overflow-x-auto no-scrollbar gap-6">
-          <nav className="flex items-center gap-6 whitespace-nowrap">
-            {subNav.map((label) => (
-              <Link
-                key={label}
-                href="#"
-                className="text-[11px] font-medium text-slate-500 hover:text-primary dark:text-slate-400 transition-colors uppercase tracking-wider"
-              >
-                {label}
-              </Link>
-            ))}
+      {/* Sub-nav bar: relative so dropdown is positioned under it and scrolls with header */}
+      <div
+        className="w-full bg-slate-50 dark:bg-black/20 border-b border-slate-100 dark:border-white/5 py-2 px-4 md:px-10 lg:px-20 relative"
+        onMouseLeave={closeLocation}
+      >
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-6 overflow-x-auto no-scrollbar">
+          <nav className="flex items-center gap-6 whitespace-nowrap min-w-0">
+            {subNav.map((label) =>
+              label === 'Location' ? (
+                <div
+                  key={label}
+                  onMouseEnter={openLocation}
+                  className="relative"
+                >
+                  <span
+                    className={`text-[11px] font-medium uppercase tracking-wider cursor-default block py-1 transition-colors ${
+                      locationOpen ? 'text-primary' : 'text-slate-500 hover:text-primary dark:text-slate-400'
+                    }`}
+                  >
+                    {label}
+                  </span>
+                </div>
+              ) : (
+                <Link
+                  key={label}
+                  href="#"
+                  className="text-[11px] font-medium text-slate-500 hover:text-primary dark:text-slate-400 transition-colors uppercase tracking-wider"
+                >
+                  {label}
+                </Link>
+              )
+            )}
           </nav>
-          <div className="hidden sm:flex items-center gap-4">
+          <div className="hidden sm:flex items-center gap-4 shrink-0">
             <Link
               href="#"
               className="text-[11px] font-bold text-primary flex items-center gap-1"
@@ -87,6 +138,68 @@ export function Header() {
             </Link>
           </div>
         </div>
+
+        {/* Full-width dropdown: absolute under sub-nav, scrolls with header */}
+        {locationOpen && (
+          <div
+            className="absolute left-0 right-0 top-full z-50 pt-1"
+            onMouseEnter={clearCloseTimeout}
+          >
+            <div className="bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-700 shadow-xl py-5 px-4 md:px-10 lg:px-20">
+              <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-4">
+                  {locationMenuRegions.map(({ region, cities }) => {
+                    const isExpanded = expandedRegions.has(region);
+                    return (
+                      <div key={region} className="min-w-0">
+                        <button
+                          type="button"
+                          onClick={() => toggleRegion(region)}
+                          className="w-full flex items-center justify-between gap-2 text-left text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider py-1.5 hover:text-primary transition-colors"
+                        >
+                          <span>{region}</span>
+                          <span className="text-primary text-lg leading-none shrink-0" aria-expanded={isExpanded}>
+                            {isExpanded ? '−' : '+'}
+                          </span>
+                        </button>
+                        {isExpanded && (
+                          <ul className="space-y-1.5 mt-2 pb-2">
+                            {cities.map((city) => (
+                              <li key={city}>
+                                <Link
+                                  href="#"
+                                  className="text-sm text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
+                                >
+                                  {city}
+                                </Link>
+                              </li>
+                            ))}
+                            <li>
+                              <Link
+                                href="#"
+                                className="text-sm font-semibold text-primary hover:underline"
+                              >
+                                View all {region}
+                              </Link>
+                            </li>
+                          </ul>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 flex flex-wrap gap-4">
+                  <Link href="#" className="text-sm font-semibold text-primary hover:underline">
+                    At Home / Virtual
+                  </Link>
+                  <Link href="#" className="text-sm font-semibold text-primary hover:underline">
+                    All Locations
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );

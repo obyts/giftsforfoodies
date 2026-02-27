@@ -18,7 +18,7 @@ type Props = {
 export async function generateMetadata({ searchParams }: Props) {
   const params = await searchParams;
   const active = getActiveFilter(params);
-  const baseTitle = 'Gifts for Foodies | Cozymeal';
+  const baseTitle = 'Gifts for Foodies | GiftsForFoodies';
   if (!active) return { title: baseTitle };
   const name =
     occasions.find((o) => o.slug === active.slug)?.name ??
@@ -26,7 +26,7 @@ export async function generateMetadata({ searchParams }: Props) {
     categories.find((c) => c.slug === active.slug)?.name ??
     active.slug;
   return {
-    title: `${name} Gifts for Foodies | Cozymeal`,
+    title: `${name} Gifts for Foodies | GiftsForFoodies`,
     description: `Find the best ${name.toLowerCase()} gifts for foodies: chef-led cooking classes, food tours, and culinary experiences.`,
   };
 }

@@ -5,6 +5,31 @@ export const cities = [
   { name: 'Tokyo', count: '76 Experiences', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCe56G13ludr5fG12Ra-FgDrCf0UKSHr_MGu8Xtl9FZcpDHMoHCn7aDIAwxxBkNjDY7ABdrt4jrrYrDycyQchC6hpHSp_lf6nWWpl5zqEAHGDsndUtDZ-7v_7fqLxKpb7eSAs5emWZfhGALzrYNQWyZrz25ESZM3khYuBy3GFN0u_EwmC8ZzWmKD4n6eevydQHG8RFwi9ugCWpwesRUsxq-QNfIj8aSTW8JnQ2cugbSm8P_pceTsPYL3W08skWObcRhI6Y7Hvw5IOc' },
   { name: 'Barcelona', count: '62 Experiences', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAbd0b0ayHowIbHgy_n4WM5oUFCr3_wB72hoOpoZMEzU92cpvqCHynlSpqYbM074ykYOFUw2lUx5_qDogyuqiipMRIwQP3l_3uvak9FQxPsTE7aFuU68nPLj109k-EIU1sxMJi7qurSjqcVyDFCXuhnyo5_boHKYHu2AVyrN0AJ2SrY8UoEbfzUN6xfvacLXxd-ShUH1thoeWSu6kBNc_-EYQJmhkLmzAftlmWGbv-W_-rQRpg6VHYY8c8fZO2aGqhm0NlYrei8SE' },
   { name: 'Rome', count: '112 Experiences', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAqvBkA-nYBApGfQn_Knxxe0LJYQL3dDW74GLayOT0lnKveeTSjGWuX8ufRJ0Gwd9EBbqM06yKtVUFQiHhiKb4U0sgR47VDvVwVIOmKaT2zJCLwdwUuUOPjnBbW9iRoUPDCZQoOPfwp92m3jvBRwBfbwGVroXs4nQulcLGDdmbSY658iayCcqMFsQ-Ocq8Wx87DKqx18WyivACLvZ0YR2Lk5FR6MIgTXv-28_CB_5J1myA8FRCGAu6VLBIay9W80mPsdD9zc46EaoU' },
+  { name: 'Amsterdam', count: '71 Experiences', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAKMcicMJOdZjuuM6FFAUNoPqBUHdnoW71jG791DaYENSe_cTZoQIloWLpY3ZwMN3xOZo6qerUuEcT8Ftug82vTJ1vuqMrnm2qb6ChgdlrP0GYstp3NfAMe5hvXXyhsFfQB8aicfbcIleIj_9dAkKawFd3QoldkuwuyFa4Bp79SxrtxvHL4DtEi4uTqmKFrv-G4irqYK_fe1IqDj8c2jgnqu-EcGs8RD92160ckqYAZWJRZSlGreu64INyksjgq2oPZVBnU7YklYts' },
+  { name: 'Madrid', count: '58 Experiences', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBhzS43D12srM6LPo7dneJPJ4fHi0kv38-Jmus9Nxszd7UfhqXSXz0aFEkIENMCnCjBJH4J_yQxDoYJ5_tH5_8Kbj3rm4ysEtGBWi_bYTmhVhIguDqfB76HyUqwGeAyZibc4b1Zc042Ii_LXAF8bkZgUdakoYo6VbIXJQwZyvxP4MzYOEQTzWCyyrznOm92UHv_ajjyuMEu9Oinm1q4pKwhewoiSKF5Y1liWQtCoiTUq0TD4UJQeHHKpd_Ukp5nA4LLvhIU9lQIbq4' },
+  { name: 'Lisbon', count: '44 Experiences', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDe0VRPIulOTZAKtKeLCH8CDAOqxNoju58YtgBuvVH-YmvFilaE1ZmM4pzW7NT7YCIgAO8-VTHFCvmG1jG5RTVhrBQ45On6bPp-KXBp7_9c22WenYsZbcjPBo6QCQOMHSxQM2oR0VTm5JyJLUFcNCXx1eru7A1ez8c20EQaAFbxoTKqK2M5bEmB7oDfyMKiT9drM5ogUaphG3qg-XxnxZbLgxHwuAMKgliLX1aQOhN5Dn5-zBQPVTRIgJ8460DLtCwMmx9wOtey4z0' },
+  { name: 'San Francisco', count: '89 Experiences', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCFXD7SiKgmKGXODgr0uv-4aajpDQ8doNv3u2saXDUcQGO6PamaLopcCZc9D38AsVTwZFbUzEGDC_lhVs6bdX01WI3bkSIu23gzaMqG6LUUXSx9Nq7OPhQ20R0mmSfrJFkKgL-RhrogrTSQUiDGOpuY7guO5osh6tua8x5ZN4lTQ4yPEd39HTKgIddoiNS2xXy2dMgaMUkKopMsJvCiczknOHaoUjLyRCfv5031mC38Ppxka7bIjEf5EfWXbvj2sjHwnbncmOZQxvg' },
+  { name: 'Chicago', count: '67 Experiences', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDZkK-YeZyYLrVQyjBHxmyeBNvKByKLx861OPhQZ3smMp36RfoLzMrRtMYs4XVP7YJNTJ6aOm6yAjSTvwcyx84Inb4LkW-UOj_h0XPYRxM0yb6p_YCBe2YfuAdkxogkxKfou6KIrp3Iz2hsLv2oZKDhxX76dRc_U2AwivBoBOkXO42G4ZDJPL-oVZoS3s05QNFGE8ZtxPqOkvkQE3L1fwGwDe56wcMCnYKiMRMHYzncvBJJPeyL-QxPtyDEAclJB7LJdSqk-JbcT7Q' },
+  { name: 'Miami', count: '52 Experiences', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA_QOPxSh6AZYS7kbXYzfBWcQDR9wIUkV1iIE19aeepEeDlmcuzzpdRrlMvjIPA6JYgta9J_id1IfNxzX4jssHsFA8BNwKhREuB90h3cwxdEcODI6H2MWNkH23a7k4vruWD8zq124HQ8p7IHAmnyj7Von9jLUxchx5sJ9qdNLVeCPuTrawjejvc7w-EAeLJJml8JFE0A4fKKZ_O1u7XPa7fSYRfLvxs4myzECPQZZ531Wgt8C4nuC33hobXfcPtQZUDiGgviDmn_r4' },
+];
+
+/** Location dropdown menu (Giftory-style: regions with cities) */
+export const locationMenuRegions: { region: string; cities: string[] }[] = [
+  { region: 'New York', cities: ['New York City', 'Syracuse', 'Buffalo', 'Rochester', 'Albany', 'Long Island'] },
+  { region: 'California', cities: ['Los Angeles', 'San Francisco', 'San Diego', 'Sacramento', 'San Jose', 'Santa Barbara', 'Orange County', 'Wine Country', 'Palm Springs', 'Yosemite'] },
+  { region: 'Texas', cities: ['Austin', 'Dallas-Fort Worth', 'Houston', 'San Antonio', 'Fort Worth', 'El Paso'] },
+  { region: 'Florida', cities: ['Miami', 'Orlando', 'Tampa', 'Jacksonville', 'Fort Lauderdale', 'Key West', 'Naples', 'West Palm Beach'] },
+  { region: 'Illinois', cities: ['Chicago', 'Springfield', 'Naperville', 'Peoria'] },
+  { region: 'Washington', cities: ['Seattle', 'Spokane', 'Tacoma', 'Bellevue'] },
+  { region: 'Massachusetts', cities: ['Boston', 'Cambridge', 'Worcester', 'Salem'] },
+  { region: 'Nevada', cities: ['Las Vegas', 'Reno', 'Lake Tahoe'] },
+  { region: 'Arizona', cities: ['Phoenix', 'Scottsdale', 'Sedona', 'Tucson', 'Grand Canyon'] },
+  { region: 'Colorado', cities: ['Denver', 'Boulder', 'Colorado Springs', 'Aspen'] },
+  { region: 'Georgia', cities: ['Atlanta', 'Savannah', 'Augusta'] },
+  { region: 'North Carolina', cities: ['Charlotte', 'Raleigh', 'Asheville', 'Durham'] },
+  { region: 'Europe', cities: ['London', 'Paris', 'Barcelona', 'Rome', 'Amsterdam', 'Madrid', 'Lisbon', 'Berlin', 'Vienna', 'Dublin'] },
+  { region: 'Asia & Pacific', cities: ['Tokyo', 'Sydney', 'Singapore', 'Hong Kong', 'Bangkok', 'Bali'] },
+  { region: 'Canada', cities: ['Toronto', 'Vancouver', 'Montreal', 'Calgary', 'Ottawa'] },
 ];
 
 export const filterPills = ['Top Picks', 'London', 'New York', 'Paris', 'Tokyo', 'Barcelona', 'Rome', 'Amsterdam'];

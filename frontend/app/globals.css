@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  /* Cozymeal brand */
+  /* GiftsForFoodies / primary */
+  --color-primary: #ec3713;
+  --color-background-light: #fdfbf9;
+  --color-background-dark: #221310;
+  /* Legacy Cozymeal (keep for meal pages) */
   --color-cozy-orange: #FF530D;
   --color-cozy-orange-dark: #E64A0B;
   --color-cozy-navy: #01011B;
@@ -12,11 +16,41 @@
   --color-cozy-gray-700: #343a40;
   --color-cozy-gray-800: #212529;
   --color-cozy-orange-100: #fff0eb;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.fade-right::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(to right, transparent, white);
+  pointer-events: none;
+  z-index: 10;
+}
+.dark .fade-right::after {
+  background: linear-gradient(to right, transparent, var(--color-background-dark));
+}
+
+.gift-card-gradient {
+  background: linear-gradient(135deg, #ec3713 0%, #b32a0e 100%);
 }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
-  background: var(--color-cozy-gray-50);
-  color: var(--color-cozy-gray-800);
+  font-family: var(--font-display), system-ui, sans-serif;
+  background: white;
+  color: #0f172a;
 }

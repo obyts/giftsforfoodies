@@ -1,21 +1,10 @@
 import Link from 'next/link';
+import type { MealProfile } from '@/lib/gifts-for-foodies-data';
 
-export type Meal = {
-  id: number;
-  title: string;
-  slug: string;
-  image: string;
-  location: string;
-  price: number;
-  rating: number;
-  reviewsCount: number;
-  tags: string[];
-};
-
-export function MealCard({ meal }: { meal: Meal }) {
+export function MealCard({ meal }: { meal: MealProfile }) {
   return (
     <Link
-      href={`#/meal/${meal.slug}`}
+      href={`/meal/${meal.slug}`}
       className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
     >
       <div className="relative aspect-[450/310] overflow-hidden">

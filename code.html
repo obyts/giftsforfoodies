@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GiftsForFoodies | Unforgettable Culinary Experiences</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec3713",
+                        "background-light": "#fdfbf9",
+                        "background-dark": "#221310",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fade-right::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            background: linear-gradient(to right, transparent, white);
+            pointer-events: none;
+            z-index: 10;
+        }
+        .dark .fade-right::after {
+            background: linear-gradient(to right, transparent, #221310);
+        }
+        .gift-card-gradient {
+            background: linear-gradient(135deg, #ec3713 0%, #b32a0e 100%);
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<header class="sticky top-0 z-50">
+<div class="bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-primary/10 px-4 md:px-10 lg:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-2 text-primary" href="#">
+<span class="material-symbols-outlined text-3xl font-bold">restaurant_menu</span>
+<h2 class="text-xl font-900 tracking-tight uppercase leading-none">GiftsForFoodies</h2>
+</a>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Experiences</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Cities</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors flex items-center gap-1" href="#">
+                            Flash Sales <span class="bg-primary text-white text-[10px] px-1.5 py-0.5 rounded-full">HOT</span>
+</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Gifts</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end items-center gap-6">
+<div class="hidden md:flex flex-1 max-w-md relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-slate-100 dark:bg-white/5 border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/20 outline-none" placeholder="Search for sushi classes, wine tours..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-primary/10 rounded-lg transition-colors relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<button class="p-2 hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full bg-slate-50 dark:bg-black/20 border-b border-slate-100 dark:border-white/5 py-2 px-4 md:px-10 lg:px-20">
+<div class="max-w-7xl mx-auto flex items-center justify-between overflow-x-auto no-scrollbar gap-6">
+<nav class="flex items-center gap-6 whitespace-nowrap">
+<a class="text-[11px] font-medium text-slate-500 hover:text-primary dark:text-slate-400 transition-colors uppercase tracking-wider" href="#">Birthday Gifts</a>
+<a class="text-[11px] font-medium text-slate-500 hover:text-primary dark:text-slate-400 transition-colors uppercase tracking-wider" href="#">Deals</a>
+<a class="text-[11px] font-medium text-slate-500 hover:text-primary dark:text-slate-400 transition-colors uppercase tracking-wider" href="#">Location</a>
+<a class="text-[11px] font-medium text-slate-500 hover:text-primary dark:text-slate-400 transition-colors uppercase tracking-wider" href="#">Experience Type</a>
+<a class="text-[11px] font-medium text-slate-500 hover:text-primary dark:text-slate-400 transition-colors uppercase tracking-wider" href="#">Gift Ideas</a>
+<a class="text-[11px] font-medium text-slate-500 hover:text-primary dark:text-slate-400 transition-colors uppercase tracking-wider" href="#">Last Minute Gifts</a>
+<a class="text-[11px] font-medium text-slate-500 hover:text-primary dark:text-slate-400 transition-colors uppercase tracking-wider" href="#">Gift Collections</a>
+<a class="text-[11px] font-medium text-slate-500 hover:text-primary dark:text-slate-400 transition-colors uppercase tracking-wider" href="#">Gift Cards</a>
+<a class="text-[11px] font-medium text-slate-500 hover:text-primary dark:text-slate-400 transition-colors uppercase tracking-wider" href="#">Corporate</a>
+</nav>
+<div class="hidden sm:flex items-center gap-4">
+<a class="text-[11px] font-bold text-primary flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">confirmation_number</span>
+                        REDEEM VOUCHER
+                    </a>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 md:px-10 py-6">
+<section class="relative rounded-xl overflow-hidden mb-12 group">
+<div class="aspect-[21/9] w-full bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuArunycJl6B1F3ocHiFYucgLcN1FMnjFm-o47CQJ-7pV1Vgl4J27Q4l8FTQVe299IJxifj4Pa2oK_sbvRcqgXypj3I9-m4D-iMFKoy7ICD-baX4MSr6APclxO5KKHog7jqcaZz23gSVrCco0WhImHC7xT_rQg3KDHlfl_B5V8PYvDFfBwe9IUgS6h4QJHOGNZHP81gZlaTqiGTznyW2SwQV9dCgCGUn_aWA-YfLXSrhdUBF0AyMX9NnUsuaOTDYrU_TBSjV33PFTfg')">
+<div class="absolute inset-0 flex flex-col justify-center px-6 md:px-16 text-white">
+<span class="bg-primary/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold w-fit mb-4 uppercase tracking-wider">Limited Time Offers Available</span>
+<h1 class="text-3xl md:text-6xl font-800 leading-[1.1] mb-6 max-w-2xl">Unforgettable Food <br/><span class="text-primary italic">Experiences</span></h1>
+<p class="text-base md:text-xl text-slate-200 mb-8 max-w-lg">Discover and gift the world's most unique culinary masterclasses, tastings, and private chef experiences.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold transition-all shadow-lg shadow-primary/20 flex items-center gap-2">
+                            Explore Now <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold transition-all">
+                            View Flash Sales
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-16">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-800 tracking-tight">Explore by City</h2>
+<div class="flex gap-2">
+<button class="p-2 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex overflow-x-auto lg:grid lg:grid-cols-6 pb-6 gap-4 no-scrollbar scroll-smooth">
+<a class="group relative shrink-0 w-48 lg:w-full aspect-[4/5] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all" href="#">
+<img alt="London" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWALvKbxHotF2UTB7G_n8QMvq0zkfzjA2XyuRobHejewNGGSY-8m6Zrqv8eYYRXOWlTUQ-xo6lnafo7XexaVPFOmz3-u5JlgI4-HFBln6g1mqIdw_B8ZP-sOq6gp2mHiWHWXltHbvN6UUgVryjMRDKGLDIjCaM1ip5I_meSX1f2bxCJHsSFUlMHXuuh9ISBXbC4InS30TFb4k-aU7KxaEsCYhLVLsDi60iCBc4Me-0fTA_oMfmTG3tjyC8_u6hrYjsc07F8cWKS2s"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-5">
+<h3 class="text-white font-bold text-xl leading-tight">London</h3>
+<p class="text-white/80 text-[10px] uppercase font-semibold tracking-wider">124 Experiences</p>
+</div>
+</a>
+<a class="group relative shrink-0 w-48 lg:w-full aspect-[4/5] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all" href="#">
+<img alt="New York" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN9qmgCIgwDXz40U7nROknc5CRrzmzIZJWXUSDJ9Y4Hx4Fi0wH7kkmMFVIaZfnoiUi4HKF231MvkkPhAgZNUfvPESaJY6l_F8v6qto_7UaRV9MKKg1XMX4EcAd2BFCbcS4ypbEla0NjAJa_sy8e1uYJZ9WJgJCro0ydsbCDOX1Fo8y6l8oK32Me2HKPeB8Tb0o_AGQQTJGkAzuxLNfpQOE1NMlj2fXbEvHVlwW9fxFwuVUpa8NdHU9PeW8h8gCioonSVxiJ_y35Q8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-5">
+<h3 class="text-white font-bold text-xl leading-tight">New York</h3>
+<p class="text-white/80 text-[10px] uppercase font-semibold tracking-wider">98 Experiences</p>
+</div>
+</a>
+<a class="group relative shrink-0 w-48 lg:w-full aspect-[4/5] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all" href="#">
+<img alt="Paris" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHA16T4tzJTaHcE368m7AVoNF844X7QTqTo9pj3jSPHjdRupXSpKYlfMNx92zr0fV-9WGsOsTSSJnjhfq6-KZ4G4FmA_VOdia4elf1l3JNYi2137CxwkA76BQoChOzyGrC0MOtF6rMb1A3jif1tNEdHEQjodnKuaYbkZGkVO1y85tPlsdhYUcCCqtAAwbjjhodiNjkqF0KFZf4x6IlK_FYAoJNQIAf7TSgXBD6SmDh_D6ef5fEEQmouB7hNmBNp6pyJ6J14QfQmyM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-5">
+<h3 class="text-white font-bold text-xl leading-tight">Paris</h3>
+<p class="text-white/80 text-[10px] uppercase font-semibold tracking-wider">85 Experiences</p>
+</div>
+</a>
+<a class="group relative shrink-0 w-48 lg:w-full aspect-[4/5] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all" href="#">
+<img alt="Tokyo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe56G13ludr5fG12Ra-FgDrCf0UKSHr_MGu8Xtl9FZcpDHMoHCn7aDIAwxxBkNjDY7ABdrt4jrrYrDycyQchC6hpHSp_lf6nWWpl5zqEAHGDsndUtDZ-7v_7fqLxKpb7eSAs5emWZfhGALzrYNQWyZrz25ESZM3khYuBy3GFN0u_EwmC8ZzWmKD4n6eevydQHG8RFwi9ugCWpwesRUsxq-QNfIj8aSTW8JnQ2cugbSm8P_pceTsPYL3W08skWObcRhI6Y7Hvw5IOc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-5">
+<h3 class="text-white font-bold text-xl leading-tight">Tokyo</h3>
+<p class="text-white/80 text-[10px] uppercase font-semibold tracking-wider">76 Experiences</p>
+</div>
+</a>
+<a class="group relative shrink-0 w-48 lg:w-full aspect-[4/5] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all" href="#">
+<img alt="Barcelona" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAbd0b0ayHowIbHgy_n4WM5oUFCr3_wB72hoOpoZMEzU92cpvqCHynlSpqYbM074ykYOFUw2lUx5_qDogyuqiipMRIwQP3l_3uvak9FQxPsTE7aFuU68nPLj109k-EIU1sxMJi7qurSjqcVyDFCXuhnyo5_boHKYHu2AVyrN0AJ2SrY8UoEbfzUN6xfvacLXxd-ShUH1thoeWSu6kBNc_-EYQJmhkLmzAftlmWGbv-W_-rQRpg6VHYY8c8fZO2aGqhm0NlYrei8SE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-5">
+<h3 class="text-white font-bold text-xl leading-tight">Barcelona</h3>
+<p class="text-white/80 text-[10px] uppercase font-semibold tracking-wider">62 Experiences</p>
+</div>
+</a>
+<a class="group relative shrink-0 w-48 lg:w-full aspect-[4/5] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all" href="#">
+<img alt="Rome" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqvBkA-nYBApGfQn_Knxxe0LJYQL3dDW74GLayOT0lnKveeTSjGWuX8ufRJ0Gwd9EBbqM06yKtVUFQiHhiKb4U0sgR47VDvVwVIOmKaT2zJCLwdwUuUOPjnBbW9iRoUPDCZQoOPfwp92m3jvBRwBfbwGVroXs4nQulcLGDdmbSY658iayCcqMFsQ-Ocq8Wx87DKqx18WyivACLvZ0YR2Lk5FR6MIgTXv-28_CB_5J1myA8FRCGAu6VLBIay9W80mPsdD9zc46EaoU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-5">
+<h3 class="text-white font-bold text-xl leading-tight">Rome</h3>
+<p class="text-white/80 text-[10px] uppercase font-semibold tracking-wider">112 Experiences</p>
+</div>
+</a>
+</div>
+</section>
+<section class="mb-16">
+<div class="flex flex-col gap-6 mb-8">
+<div class="flex items-center justify-between gap-4">
+<h2 class="text-2xl md:text-3xl font-800 tracking-tight leading-tight">Bestselling Experience Gifts</h2>
+<a class="text-primary font-bold flex items-center gap-1 hover:underline shrink-0" href="#">
+                        View all <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</a>
+</div>
+<div class="relative flex items-center group">
+<button class="hidden lg:flex absolute -left-5 z-20 bg-white dark:bg-slate-800 shadow-lg border border-slate-100 dark:border-slate-700 rounded-full p-2 items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="fade-right relative flex-1 overflow-hidden">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-2 scroll-smooth">
+<button class="px-5 py-2.5 rounded-full text-sm font-bold bg-primary text-white shadow-md shadow-primary/20 border border-primary transition-all whitespace-nowrap">
+                                Top Picks
+                            </button>
+<button class="px-5 py-2.5 rounded-full text-sm font-semibold bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border border-transparent hover:border-slate-300 dark:hover:border-slate-700 transition-all whitespace-nowrap">London</button>
+<button class="px-5 py-2.5 rounded-full text-sm font-semibold bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border border-transparent hover:border-slate-300 dark:hover:border-slate-700 transition-all whitespace-nowrap">New York</button>
+<button class="px-5 py-2.5 rounded-full text-sm font-semibold bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border border-transparent hover:border-slate-300 dark:hover:border-slate-700 transition-all whitespace-nowrap">Paris</button>
+<button class="px-5 py-2.5 rounded-full text-sm font-semibold bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border border-transparent hover:border-slate-300 dark:hover:border-slate-700 transition-all whitespace-nowrap">Tokyo</button>
+<button class="px-5 py-2.5 rounded-full text-sm font-semibold bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border border-transparent hover:border-slate-300 dark:hover:border-slate-700 transition-all whitespace-nowrap">Barcelona</button>
+<button class="px-5 py-2.5 rounded-full text-sm font-semibold bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border border-transparent hover:border-slate-300 dark:hover:border-slate-700 transition-all whitespace-nowrap">Rome</button>
+<button class="px-5 py-2.5 rounded-full text-sm font-semibold bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border border-transparent hover:border-slate-300 dark:hover:border-slate-700 transition-all whitespace-nowrap">Amsterdam</button>
+</div>
+</div>
+<button class="hidden lg:flex absolute -right-5 z-20 bg-white dark:bg-slate-800 shadow-lg border border-slate-100 dark:border-slate-700 rounded-full p-2 items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="group cursor-pointer flex flex-col h-full bg-[#f8f9fa] dark:bg-white/5 rounded-2xl overflow-hidden border border-slate-100 dark:border-white/10 shadow-sm hover:shadow-xl transition-all relative">
+<div class="absolute top-3 left-3 z-30 bg-white/90 dark:bg-black/80 backdrop-blur-md px-2 py-1 rounded text-[10px] font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] fill-primary">stars</span> BESTSELLER
+                    </div>
+<div class="relative aspect-square flex items-center justify-center p-8 overflow-hidden mb-[1.25rem]">
+<div class="gift-card-gradient w-full aspect-[1.58/1] rounded-xl shadow-2xl relative overflow-hidden rotate-[-6deg] group-hover:rotate-0 group-hover:scale-105 transition-all duration-500 p-6 flex flex-col justify-between border border-white/20">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-1.5 text-white">
+<span class="material-symbols-outlined text-xl font-bold">restaurant_menu</span>
+<h4 class="text-[10px] font-900 tracking-tight uppercase">GiftsForFoodies</h4>
+</div>
+<span class="material-symbols-outlined text-white/50 text-2xl">card_giftcard</span>
+</div>
+<div class="space-y-2">
+<div class="h-0.5 w-10 bg-white/30 rounded-full"></div>
+<div class="text-[8px] text-white/80 font-bold tracking-[0.2em] uppercase">The Ultimate Gift for Food Lovers</div>
+</div>
+<div class="absolute -right-8 -bottom-8 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+<div class="absolute -left-4 -top-4 w-24 h-24 bg-black/10 rounded-full blur-xl"></div>
+</div>
+</div>
+<div class="px-4 pb-6 space-y-1 mt-auto pt-1">
+<div class="flex items-center gap-1 text-slate-500 text-xs uppercase font-bold tracking-widest">
+<span class="material-symbols-outlined text-xs">location_on</span> Countrywide
+                        </div>
+<h3 class="font-bold text-lg leading-tight group-hover:text-primary transition-colors">GiftsForFoodies Gift Card</h3>
+<div class="h-5"></div>
+<p class="text-primary font-bold text-xl pt-1">From $18</p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-xl overflow-hidden mb-4 shadow-sm group-hover:shadow-xl transition-all">
+<div class="absolute top-3 left-3 z-10 bg-white/90 dark:bg-black/80 backdrop-blur-md px-2 py-1 rounded text-[10px] font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] fill-primary">stars</span> BESTSELLER
+                        </div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn5LDIFORsSKVbajni4k0aacAbqsacYj4d0wA13dFNemZq57iqDwoEeITEZRMpCDCuDy8d-yRSj2d9UF9EvZ22lFeMXQp4unUb84AO793CnlhmPNOhSMlt6Z6Na9WW93H7eeyTouxljgJgchAByK_81tEAZazuushrAuq8RExm-kH_MQQWjJ56tFRMqIlHNse1-1HVTIJc3Rm3_mKcq0g9f__Kh7aTl6SqZXapX8QXl8uaDILkicwWwqnlDlIfX4CtPsOBXuhKwoY"/>
+</div>
+<div class="space-y-1 px-4 lg:px-0">
+<div class="flex items-center gap-1 text-slate-500 text-xs uppercase font-bold tracking-widest">
+<span class="material-symbols-outlined text-xs">location_on</span> New York, NY
+                        </div>
+<h3 class="font-bold text-lg leading-tight group-hover:text-primary transition-colors">Omakase Sushi Masterclass</h3>
+<div class="flex items-center gap-2 text-sm">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<span class="text-slate-400 font-medium">(312 reviews)</span>
+</div>
+<p class="text-primary font-bold text-xl pt-1">From $120.00</p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-xl overflow-hidden mb-4 shadow-sm group-hover:shadow-xl transition-all">
+<div class="absolute top-3 left-3 z-10 bg-white/90 dark:bg-black/80 backdrop-blur-md px-2 py-1 rounded text-[10px] font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] fill-primary">stars</span> BESTSELLER
+                        </div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO5tgviRKYt3Nu_BS3S6jyl4dfI5pFCEPdyKK_8crtMLWaz0yz7v2YHz7qWZH3RIUMc5iJJOjVqkRsZtN3y_r-vhMjvSWvOJM73NC8lAi0KBwDVtYXUy4cJJhH3oqPfm6NbUYenqYWxL5g3FdFu1yS9Mw12k7zUutm_gUJGxzFZDGJyXGmPNGwpr-bbl3zyOBK6PEyNolSGI3gQXuufphxijte4B7xjlmni1czWVstCQe-mRFdZgCmALWEi9jGTfV-wppAdEmnGt8"/>
+</div>
+<div class="space-y-1 px-4 lg:px-0">
+<div class="flex items-center gap-1 text-slate-500 text-xs uppercase font-bold tracking-widest">
+<span class="material-symbols-outlined text-xs">location_on</span> Napa Valley, CA
+                        </div>
+<h3 class="font-bold text-lg leading-tight group-hover:text-primary transition-colors">Napa Valley Wine Tasting Tour</h3>
+<div class="flex items-center gap-2 text-sm">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+</div>
+<span class="text-slate-400 font-medium">(1.2k reviews)</span>
+</div>
+<p class="text-primary font-bold text-xl pt-1">From $195.00</p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-xl overflow-hidden mb-4 shadow-sm group-hover:shadow-xl transition-all">
+<div class="absolute top-3 left-3 z-10 bg-white/90 dark:bg-black/80 backdrop-blur-md px-2 py-1 rounded text-[10px] font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] fill-primary">stars</span> BESTSELLER
+                        </div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOsb_7FiPSVzRtM0RQoVx9NJbbqlKgJOt058l4GWcjWZYwS3NCAub9o4T6RR4lbF2Wl7PpBgm3AkZPtFkGleNdDPuW6lL8V8ITN-zuEaOhugeGnhtdzpuyFkPXnBovjJrhbZ2SmJcelElJSmsGbZHyFZkteG7VGK5Gk8G-eqskgdxSzpJFCNAALWMynzfFwo6v7VSCfAoOkxBprMjY72kw_7wazxkkWEfZpn-fua_wbGlw6iC2qDfs_OoC18AYObkyIrDOlybXveo"/>
+</div>
+<div class="space-y-1 px-4 lg:px-0">
+<div class="flex items-center gap-1 text-slate-500 text-xs uppercase font-bold tracking-widest">
+<span class="material-symbols-outlined text-xs">location_on</span> Paris, FR
+                        </div>
+<h3 class="font-bold text-lg leading-tight group-hover:text-primary transition-colors">Private Michelin Chef Dinner</h3>
+<div class="flex items-center gap-2 text-sm">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+</div>
+<span class="text-slate-400 font-medium">(89 reviews)</span>
+</div>
+<p class="text-primary font-bold text-xl pt-1">From €250.00</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-16 bg-primary/5 border border-primary/10 rounded-xl p-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl font-bold">bolt</span>
+<div>
+<h2 class="text-2xl font-800 tracking-tight">Flash Sales</h2>
+<p class="text-slate-500 text-sm">Grab these delicious deals before they're gone</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<p class="text-sm font-bold uppercase tracking-wider text-slate-400">Ends in:</p>
+<div class="flex gap-2">
+<div class="bg-primary text-white w-10 h-10 rounded flex items-center justify-center font-bold">12</div>
+<div class="bg-primary text-white w-10 h-10 rounded flex items-center justify-center font-bold">45</div>
+<div class="bg-primary text-white w-10 h-10 rounded flex items-center justify-center font-bold">08</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-white/5 rounded-lg overflow-hidden border border-primary/10 hover:shadow-xl transition-all">
+<div class="relative h-40 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqvBkA-nYBApGfQn_Knxxe0LJYQL3dDW74GLayOT0lnKveeTSjGWuX8ufRJ0Gwd9EBbqM06yKtVUFQiHhiKb4U0sgR47VDvVwVIOmKaT2zJCLwdwUuUOPjnBbW9iRoUPDCZQoOPfwp92m3jvBRwBfbwGVroXs4nQulcLGDdmbSY658iayCcqMFsQ-Ocq8Wx87DKqx18WyivACLvZ0YR2Lk5FR6MIgTXv-28_CB_5J1myA8FRCGAu6VLBIay9W80mPsdD9zc46EaoU')">
+<div class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded">SAVE 40%</div>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-sm mb-1 truncate">Authentic Neapolitan Pizza Class</h4>
+<div class="flex items-baseline gap-2">
+<span class="text-primary font-bold text-lg">£29</span>
+<span class="text-slate-400 text-xs line-through">£49</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-white/5 rounded-lg overflow-hidden border border-primary/10 hover:shadow-xl transition-all">
+<div class="relative h-40 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFXD7SiKgmKGXODgr0uv-4aajpDQ8doNv3u2saXDUcQGO6PamaLopcCZc9D38AsVTwZFbUzEGDC_lhVs6bdX01WI3bkSIu23gzaMqG6LUUXSx9Nq7OPhQ20R0mmSfrJFkKgL-RhrogrTSQUiDGOpuY7guO5osh6tua8x5ZN4lTQ4yPEd39HTKgIddoiNS2xXy2dMgaMUkKopMsJvCiczknOHaoUjLyRCfv5031mC38Ppxka7bIjEf5EfWXbvj2sjHwnbncmOZQxvg')">
+<div class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded">SAVE 25%</div>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-sm mb-1 truncate">Sommelier Wine Tasting</h4>
+<div class="flex items-baseline gap-2">
+<span class="text-primary font-bold text-lg">£55</span>
+<span class="text-slate-400 text-xs line-through">£75</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-white/5 rounded-lg overflow-hidden border border-primary/10 hover:shadow-xl transition-all">
+<div class="relative h-40 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDe0VRPIulOTZAKtKeLCH8CDAOqxNoju58YtgBuvVH-YmvFilaE1ZmM4pzW7NT7YCIgAO8-VTHFCvmG1jG5RTVhrBQ45On6bPp-KXBp7_9c22WenYsZbcjPBo6QCQOMHSxQM2oR0VTm5JyJLUFcNCXx1eru7A1ez8c20EQaAFbxoTKqK2M5bEmB7oDfyMKiT9drM5ogUaphG3qg-XxnxZbLgxHwuAMKgliLX1aQOhN5Dn5-zBQPVTRIgJ8460DLtCwMmx9wOtey4z0')">
+<div class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded">SAVE 30%</div>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-sm mb-1 truncate">Advanced Mixology Workshop</h4>
+<div class="flex items-baseline gap-2">
+<span class="text-primary font-bold text-lg">£42</span>
+<span class="text-slate-400 text-xs line-through">£60</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-white/5 rounded-lg overflow-hidden border border-primary/10 hover:shadow-xl transition-all">
+<div class="relative h-40 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_QOPxSh6AZYS7kbXYzfBWcQDR9wIUkV1iIE19aeepEeDlmcuzzpdRrlMvjIPA6JYgta9J_id1IfNxzX4jssHsFA8BNwKhREuB90h3cwxdEcODI6H2MWNkH23a7k4vruWD8zq124HQ8p7IHAmnyj7Von9jLUxchx5sJ9qdNLVeCPuTrawjejvc7w-EAeLJJml8JFE0A4fKKZ_O1u7XPa7fSYRfLvxs4myzECPQZZ531Wgt8C4nuC33hobXfcPtQZUDiGgviDmn_r4')">
+<div class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded">SAVE 50%</div>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-sm mb-1 truncate">Pastry &amp; Dessert Masterclass</h4>
+<div class="flex items-baseline gap-2">
+<span class="text-primary font-bold text-lg">£25</span>
+<span class="text-slate-400 text-xs line-through">£50</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-16">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-800 tracking-tight">Shop By Recipient</h2>
+<div class="flex gap-2">
+<button class="p-2 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex overflow-x-auto pb-6 gap-6 no-scrollbar scroll-smooth">
+<a class="group shrink-0 w-[240px] relative aspect-[3/4] rounded-2xl overflow-hidden" href="#">
+<img alt="For Him" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOsb_7FiPSVzRtM0RQoVx9NJbbqlKgJOt058l4GWcjWZYwS3NCAub9o4T6RR4lbF2Wl7PpBgm3AkZPtFkGleNdDPuW6lL8V8ITN-zuEaOhugeGnhtdzpuyFkPXnBovjJrhbZ2SmJcelElJSmsGbZHyFZkteG7VGK5Gk8G-eqskgdxSzpJFCNAALWMynzfFwo6v7VSCfAoOkxBprMjY72kw_7wazxkkWEfZpn-fua_wbGlw6iC2qDfs_OoC18AYObkyIrDOlybXveo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-center p-6 transition-all group-hover:from-black/90">
+<span class="text-white text-2xl font-800 text-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">For Him</span>
+</div>
+</a>
+<a class="group shrink-0 w-[240px] relative aspect-[3/4] rounded-2xl overflow-hidden" href="#">
+<img alt="For Her" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKMcicMJOdZjuuM6FFAUNoPqBUHdnoW71jG791DaYENSe_cTZoQIloWLpY3ZwMN3xOZo6qerUuEcT8Ftug82vTJ1vuqMrnm2qb6ChgdlrP0GYstp3NfAMe5hvXXyhsFfQB8aicfbcIleIj_9dAkKawFd3QoldkuwuyFa4Bp79SxrtxvHL4DtEi4uTqmKFrv-G4irqYK_fe1IqDj8c2jgnqu-EcGs8RD92160ckqYAZWJRZSlGreu64INyksjgq2oPZVBnU7YklYts"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-center p-6 transition-all group-hover:from-black/90">
+<span class="text-white text-2xl font-800 text-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">For Her</span>
+</div>
+</a>
+<a class="group shrink-0 w-[240px] relative aspect-[3/4] rounded-2xl overflow-hidden" href="#">
+<img alt="For Couples" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO5tgviRKYt3Nu_BS3S6jyl4dfI5pFCEPdyKK_8crtMLWaz0yz7v2YHz7qWZH3RIUMc5iJJOjVqkRsZtN3y_r-vhMjvSWvOJM73NC8lAi0KBwDVtYXUy4cJJhH3oqPfm6NbUYenqYWxL5g3FdFu1yS9Mw12k7zUutm_gUJGxzFZDGJyXGmPNGwpr-bbl3zyOBK6PEyNolSGI3gQXuufphxijte4B7xjlmni1czWVstCQe-mRFdZgCmALWEi9jGTfV-wppAdEmnGt8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-center p-6 transition-all group-hover:from-black/90">
+<span class="text-white text-2xl font-800 text-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">For Couples</span>
+</div>
+</a>
+<a class="group shrink-0 w-[240px] relative aspect-[3/4] rounded-2xl overflow-hidden" href="#">
+<img alt="For Families" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhzS43D12srM6LPo7dneJPJ4fHi0kv38-Jmus9Nxszd7UfhqXSXz0aFEkIENMCnCjBJH4J_yQxDoYJ5_tH5_8Kbj3rm4ysEtGBWi_bYTmhVhIguDqfB76HyUqwGeAyZibc4b1Zc042Ii_LXAF8bkZgUdakoYo6VbIXJQwZyvxP4MzYOEQTzWCyyrznOm92UHv_ajjyuMEu9Oinm1q4pKwhewoiSKF5Y1liWQtCoiTUq0TD4UJQeHHKpd_Ukp5nA4LLvhIU9lQIbq4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-center p-6 transition-all group-hover:from-black/90">
+<span class="text-white text-2xl font-800 text-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">For Families</span>
+</div>
+</a>
+<a class="group shrink-0 w-[240px] relative aspect-[3/4] rounded-2xl overflow-hidden" href="#">
+<img alt="For Foodies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn5LDIFORsSKVbajni4k0aacAbqsacYj4d0wA13dFNemZq57iqDwoEeITEZRMpCDCuDy8d-yRSj2d9UF9EvZ22lFeMXQp4unUb84AO793CnlhmPNOhSMlt6Z6Na9WW93H7eeyTouxljgJgchAByK_81tEAZazuushrAuq8RExm-kH_MQQWjJ56tFRMqIlHNse1-1HVTIJc3Rm3_mKcq0g9f__Kh7aTl6SqZXapX8QXl8uaDILkicwWwqnlDlIfX4CtPsOBXuhKwoY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-center p-6 transition-all group-hover:from-black/90">
+<span class="text-white text-2xl font-800 text-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">For Foodies</span>
+</div>
+</a>
+</div>
+</section>
+<section class="mb-16">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-800 tracking-tight">Shop By Category</h2>
+<div class="flex gap-2">
+<button class="p-2 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex overflow-x-auto pb-6 gap-6 no-scrollbar scroll-smooth">
+<a class="group shrink-0 w-[240px] relative aspect-[3/4] rounded-2xl overflow-hidden" href="#">
+<img alt="Fine Dining" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOsb_7FiPSVzRtM0RQoVx9NJbbqlKgJOt058l4GWcjWZYwS3NCAub9o4T6RR4lbF2Wl7PpBgm3AkZPtFkGleNdDPuW6lL8V8ITN-zuEaOhugeGnhtdzpuyFkPXnBovjJrhbZ2SmJcelElJSmsGbZHyFZkteG7VGK5Gk8G-eqskgdxSzpJFCNAALWMynzfFwo6v7VSCfAoOkxBprMjY72kw_7wazxkkWEfZpn-fua_wbGlw6iC2qDfs_OoC18AYObkyIrDOlybXveo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-center p-6 transition-all group-hover:from-black/90">
+<span class="text-white text-2xl font-800 text-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">Fine Dining</span>
+</div>
+</a>
+<a class="group shrink-0 w-[240px] relative aspect-[3/4] rounded-2xl overflow-hidden" href="#">
+<img alt="Cooking Classes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqvBkA-nYBApGfQn_Knxxe0LJYQL3dDW74GLayOT0lnKveeTSjGWuX8ufRJ0Gwd9EBbqM06yKtVUFQiHhiKb4U0sgR47VDvVwVIOmKaT2zJCLwdwUuUOPjnBbW9iRoUPDCZQoOPfwp92m3jvBRwBfbwGVroXs4nQulcLGDdmbSY658iayCcqMFsQ-Ocq8Wx87DKqx18WyivACLvZ0YR2Lk5FR6MIgTXv-28_CB_5J1myA8FRCGAu6VLBIay9W80mPsdD9zc46EaoU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-center p-6 transition-all group-hover:from-black/90">
+<span class="text-white text-2xl font-800 text-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">Cooking Classes</span>
+</div>
+</a>
+<a class="group shrink-0 w-[240px] relative aspect-[3/4] rounded-2xl overflow-hidden" href="#">
+<img alt="Wine Tasting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO5tgviRKYt3Nu_BS3S6jyl4dfI5pFCEPdyKK_8crtMLWaz0yz7v2YHz7qWZH3RIUMc5iJJOjVqkRsZtN3y_r-vhMjvSWvOJM73NC8lAi0KBwDVtYXUy4cJJhH3oqPfm6NbUYenqYWxL5g3FdFu1yS9Mw12k7zUutm_gUJGxzFZDGJyXGmPNGwpr-bbl3zyOBK6PEyNolSGI3gQXuufphxijte4B7xjlmni1czWVstCQe-mRFdZgCmALWEi9jGTfV-wppAdEmnGt8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-center p-6 transition-all group-hover:from-black/90">
+<span class="text-white text-2xl font-800 text-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">Wine Tasting</span>
+</div>
+</a>
+<a class="group shrink-0 w-[240px] relative aspect-[3/4] rounded-2xl overflow-hidden" href="#">
+<img alt="Street Food Tours" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqvBkA-nYBApGfQn_Knxxe0LJYQL3dDW74GLayOT0lnKveeTSjGWuX8ufRJ0Gwd9EBbqM06yKtVUFQiHhiKb4U0sgR47VDvVwVIOmKaT2zJCLwdwUuUOPjnBbW9iRoUPDCZQoOPfwp92m3jvBRwBfbwGVroXs4nQulcLGDdmbSY658iayCcqMFsQ-Ocq8Wx87DKqx18WyivACLvZ0YR2Lk5FR6MIgTXv-28_CB_5J1myA8FRCGAu6VLBIay9W80mPsdD9zc46EaoU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-center p-6 transition-all group-hover:from-black/90">
+<span class="text-white text-2xl font-800 text-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">Street Food Tours</span>
+</div>
+</a>
+<a class="group shrink-0 w-[240px] relative aspect-[3/4] rounded-2xl overflow-hidden" href="#">
+<img alt="Dessert Workshops" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhzS43D12srM6LPo7dneJPJ4fHi0kv38-Jmus9Nxszd7UfhqXSXz0aFEkIENMCnCjBJH4J_yQxDoYJ5_tH5_8Kbj3rm4ysEtGBWi_bYTmhVhIguDqfB76HyUqwGeAyZibc4b1Zc042Ii_LXAF8bkZgUdakoYo6VbIXJQwZyvxP4MzYOEQTzWCyyrznOm92UHv_ajjyuMEu9Oinm1q4pKwhewoiSKF5Y1liWQtCoiTUq0TD4UJQeHHKpd_Ukp5nA4LLvhIU9lQIbq4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-center p-6 transition-all group-hover:from-black/90">
+<span class="text-white text-2xl font-800 text-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">Dessert Workshops</span>
+</div>
+</a>
+</div>
+</section>
+<section class="mb-16 -mx-4 md:-mx-10 lg:-mx-20 px-4 md:px-10 lg:px-20 py-16 bg-slate-50 dark:bg-white/5">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<h2 class="text-3xl md:text-4xl font-900 tracking-tight mb-4">What our customers say</h2>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1">
+<span class="text-2xl font-bold">4.9/5</span>
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+</div>
+</div>
+<span class="text-slate-500 dark:text-slate-400 font-medium">based on 10,000+ reviews</span>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="p-3 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary hover:text-primary transition-all shadow-sm">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-3 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary hover:text-primary transition-all shadow-sm">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex overflow-x-auto gap-6 pb-4 no-scrollbar scroll-smooth">
+<div class="shrink-0 w-full md:w-[400px] bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="flex justify-between items-start mb-6">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 rounded-full text-[10px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm font-bold">verified</span>
+                                Verified Purchaser
+                            </div>
+</div>
+<h4 class="text-xl font-bold mb-3">Amazing Experience!</h4>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 italic">"The Omakase masterclass was beyond my expectations. The chef was incredibly knowledgeable and the fish was the freshest I've ever tasted. A perfect birthday gift!"</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center font-bold text-primary">SC</div>
+<div>
+<p class="font-bold text-sm">Sarah Chen</p>
+<p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">New York, NY</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 w-full md:w-[400px] bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="flex justify-between items-start mb-6">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 rounded-full text-[10px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm font-bold">verified</span>
+                                Verified Purchaser
+                            </div>
+</div>
+<h4 class="text-xl font-bold mb-3">Unforgettable Wine Tour</h4>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 italic">"Napa Valley tour was organized perfectly. From the pickup to the private cellar tastings, every detail was handled. Highly recommend for any wine lover."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center font-bold text-primary">MJ</div>
+<div>
+<p class="font-bold text-sm">Michael Jensen</p>
+<p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Austin, TX</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 w-full md:w-[400px] bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="flex justify-between items-start mb-6">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+<span class="material-symbols-outlined fill-current text-xl">star</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 rounded-full text-[10px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm font-bold">verified</span>
+                                Verified Purchaser
+                            </div>
+</div>
+<h4 class="text-xl font-bold mb-3">Chef's Dinner was Divine</h4>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 italic">"Gifted my parents the Michelin Chef dinner in Paris. They haven't stopped talking about it! The service and the food were world-class."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center font-bold text-primary">EL</div>
+<div>
+<p class="font-bold text-sm">Emma Laurent</p>
+<p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">London, UK</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-20 bg-background-light dark:bg-white/5 rounded-3xl overflow-hidden border border-slate-100 dark:border-white/10">
+<div class="flex flex-col lg:flex-row items-stretch">
+<div class="lg:w-1/4 min-h-[200px] lg:min-h-0">
+<img alt="People enjoying a gourmet meal together" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZkK-YeZyYLrVQyjBHxmyeBNvKByKLx861OPhQZ3smMp36RfoLzMrRtMYs4XVP7YJNTJ6aOm6yAjSTvwcyx84Inb4LkW-UOj_h0XPYRxM0yb6p_YCBe2YfuAdkxogkxKfou6KIrp3Iz2hsLv2oZKDhxX76dRc_U2AwivBoBOkXO42G4ZDJPL-oVZoS3s05QNFGE8ZtxPqOkvkQE3L1fwGwDe56wcMCnYKiMRMHYzncvBJJPeyL-QxPtyDEAclJB7LJdSqk-JbcT7Q"/>
+</div>
+<div class="lg:w-3/4 p-8 lg:px-12 py-10 flex flex-col justify-center">
+<h2 class="text-3xl lg:text-4xl font-800 mb-8 tracking-tight text-slate-900 dark:text-white">Why You’ll Love Us</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+<div class="flex flex-col items-start gap-4">
+<div class="w-10 h-10 shrink-0 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl font-bold">search</span>
+</div>
+<div>
+<h3 class="text-base font-bold mb-2 leading-tight">1. Discover: Hand-picked experiences</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Browse through world-class culinary masterclasses.</p>
+</div>
+</div>
+<div class="flex flex-col items-start gap-4">
+<div class="w-10 h-10 shrink-0 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl font-bold">mail</span>
+</div>
+<div>
+<h3 class="text-base font-bold mb-2 leading-tight">2. Gift: Instant digital delivery</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Personalize e-vouchers or luxury physical gift boxes.</p>
+</div>
+</div>
+<div class="flex flex-col items-start gap-4">
+<div class="w-10 h-10 shrink-0 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl font-bold">celebration</span>
+</div>
+<div>
+<h3 class="text-base font-bold mb-2 leading-tight">3. Enjoy: Memories that last</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Unforgettable culinary journeys await your recipient.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white dark:bg-black py-16 px-4 md:px-10 border-t border-slate-100 dark:border-white/5">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="space-y-6">
+<a class="flex items-center gap-2 text-primary" href="#">
+<span class="material-symbols-outlined text-3xl font-bold">restaurant_menu</span>
+<h2 class="text-xl font-900 tracking-tight uppercase leading-none">GiftsForFoodies</h2>
+</a>
+<p class="text-slate-500 text-sm leading-relaxed">Curating the world's most exquisite culinary experiences for food lovers everywhere. Since 2018.</p>
+<div class="flex gap-4">
+<a class="p-2 bg-slate-100 dark:bg-white/5 rounded-full hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="p-2 bg-slate-100 dark:bg-white/5 rounded-full hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">camera</span></a>
+<a class="p-2 bg-slate-100 dark:bg-white/5 rounded-full hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">movie</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6">Quick Links</h4>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">How it Works</a></li>
+<li><a class="hover:text-primary" href="#">Redeem a Voucher</a></li>
+<li><a class="hover:text-primary" href="#">Corporate Gifting</a></li>
+<li><a class="hover:text-primary" href="#">Become a Partner</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Help &amp; Support</h4>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary" href="#">FAQ</a></li>
+<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Newsletter</h4>
+<p class="text-sm text-slate-500 mb-4">Get the tastiest deals directly in your inbox.</p>
+<form class="flex gap-2">
+<input class="flex-1 bg-slate-100 dark:bg-white/5 border-none rounded-lg px-4 py-2 text-sm focus:ring-primary outline-none" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white p-2 rounded-lg" type="submit">
+<span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-100 dark:border-white/5 text-center text-slate-400 text-xs">
+            © 2024 GiftsForFoodies. All rights reserved. Made with passion for gourmets.
+        </div>
+</footer>
+
+</body></html>

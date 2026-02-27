@@ -1,33 +1,27 @@
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
-import { CategoryFilters } from '@/components/CategoryFilters';
-import { ExploreLocations } from '@/components/ExploreLocations';
-import { MealsGrid } from '@/components/MealsGrid';
-import { ShopByRecipient } from '@/components/ShopByRecipient';
-import { BrowseByCategory } from '@/components/BrowseByCategory';
-import { GiftCardsBlock } from '@/components/GiftCardsBlock';
-import { HowItWorks } from '@/components/HowItWorks';
+import { ExploreByCity } from '@/components/home/ExploreByCity';
+import { BestsellingGifts } from '@/components/home/BestsellingGifts';
+import { FlashSales } from '@/components/home/FlashSales';
+import { ShopByRecipient } from '@/components/home/ShopByRecipient';
+import { ShopByCategory } from '@/components/home/ShopByCategory';
+import { Testimonials } from '@/components/home/Testimonials';
 import { WhyLoveUs } from '@/components/WhyLoveUs';
-import { Newsletter } from '@/components/Newsletter';
-import { FAQ } from '@/components/FAQ';
 import { Footer } from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-cozy-gray-50">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-background-dark text-slate-900 dark:text-slate-100">
       <Header />
-      <main>
+      <main className="max-w-7xl mx-auto px-4 md:px-10 py-6 w-full">
         <Hero />
-        <CategoryFilters />
-        <ExploreLocations />
-        <MealsGrid />
+        <ExploreByCity />
+        <BestsellingGifts />
+        <FlashSales />
         <ShopByRecipient />
-        <BrowseByCategory />
-        <GiftCardsBlock />
-        <HowItWorks />
+        <ShopByCategory />
+        <Testimonials />
         <WhyLoveUs />
-        <Newsletter />
-        <FAQ />
       </main>
       <Footer />
     </div>

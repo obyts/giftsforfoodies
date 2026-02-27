@@ -41,7 +41,30 @@ export const recipients = [
   { name: 'Coworkers', slug: 'coworkers' },
 ];
 
-export const staticMeals = [
+export type MealProfile = {
+  id: number;
+  title: string;
+  slug: string;
+  image: string;
+  location: string;
+  price: number;
+  rating: number;
+  reviewsCount: number;
+  tags: string[];
+  description?: string;
+  whyTheyLoveIt?: string[];
+  people?: number;
+  optionsCount?: number;
+  minGuests?: number;
+  maxGuests?: number;
+  durationHours?: number;
+  chefName?: string;
+  chefImage?: string;
+  sampleMenu?: string[];
+  isOnline?: boolean;
+};
+
+export const staticMeals: MealProfile[] = [
   {
     id: 1,
     title: 'Italian Pasta Making Class',
@@ -52,6 +75,17 @@ export const staticMeals = [
     rating: 4.9,
     reviewsCount: 124,
     tags: ['Italian', 'Pasta'],
+    description: 'Give the gift of hands-on pasta making! Learn to craft fresh Italian pasta from scratch with a professional chef. Perfect for date nights, birthdays, or any occasion.',
+    whyTheyLoveIt: ['Choose from 100+ cooking classes nationwide', 'Hands-on experience with expert chefs', 'Learn authentic techniques they can use at home', 'Fresh classes added year-round'],
+    people: 2,
+    optionsCount: 150,
+    minGuests: 2,
+    maxGuests: 12,
+    durationHours: 2.5,
+    chefName: 'Chef Marco',
+    chefImage: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_80,h_80,f_auto,q_auto/v1578658687/Use_for_Los_angeles_d57pvs.jpg',
+    sampleMenu: ['Fresh pasta dough', 'Homemade ravioli', 'Classic tomato sauce', 'Parmesan & herbs'],
+    isOnline: false,
   },
   {
     id: 2,
@@ -63,6 +97,16 @@ export const staticMeals = [
     rating: 4.8,
     reviewsCount: 89,
     tags: ['Japanese', 'Sushi'],
+    description: 'Discover the art of sushi! A chef-led workshop where they learn to roll, slice, and perfect Japanese sushi techniques in a fun, interactive setting.',
+    whyTheyLoveIt: ['Expert chefs guide every step', 'Explore authentic Japanese cuisine', 'Perfect for couples or groups', 'Take skills home for future dinners'],
+    people: 2,
+    optionsCount: 80,
+    minGuests: 2,
+    maxGuests: 8,
+    durationHours: 2,
+    chefName: 'Chef Yuki',
+    sampleMenu: ['Maki rolls', 'Nigiri', 'Sashimi', 'Miso soup'],
+    isOnline: false,
   },
   {
     id: 3,
@@ -74,6 +118,16 @@ export const staticMeals = [
     rating: 5.0,
     reviewsCount: 56,
     tags: ['French', 'Gourmet'],
+    description: 'A gourmet French cooking adventure! Master classic techniques from sauces to soufflés with a professional chef in an intimate culinary setting.',
+    whyTheyLoveIt: ['Learn classic French techniques', 'Premium ingredients & wine pairings', 'Elegant experience for special occasions', 'Skills that impress at any dinner party'],
+    people: 2,
+    optionsCount: 60,
+    minGuests: 2,
+    maxGuests: 6,
+    durationHours: 3,
+    chefName: 'Chef Pierre',
+    sampleMenu: ['Coq au vin', 'Ratatouille', 'Crème brûlée'],
+    isOnline: false,
   },
   {
     id: 4,
@@ -85,6 +139,16 @@ export const staticMeals = [
     rating: 4.7,
     reviewsCount: 203,
     tags: ['BBQ', 'Grilling'],
+    description: 'Fire up the grill! Learn BBQ mastery from pitmasters—smoking, seasoning, and searing techniques that make every backyard cookout a hit.',
+    whyTheyLoveIt: ['Master smoking & grilling techniques', 'Perfect for outdoor enthusiasts', 'Great for groups and gatherings', 'Year-round classes available'],
+    people: 4,
+    optionsCount: 120,
+    minGuests: 2,
+    maxGuests: 20,
+    durationHours: 2,
+    chefName: 'Chef Mike',
+    sampleMenu: ['Smoked brisket', 'BBQ ribs', 'Grilled vegetables'],
+    isOnline: false,
   },
   {
     id: 5,
@@ -96,6 +160,16 @@ export const staticMeals = [
     rating: 4.9,
     reviewsCount: 312,
     tags: ['Online', 'Pizza'],
+    description: 'Make pizza from anywhere! A live online class where they learn dough, sauce, and topping techniques with a chef—perfect for virtual date nights.',
+    whyTheyLoveIt: ['Join from home—no travel needed', 'Live chef interaction', 'Perfect for couples or families', 'Recipes they can recreate anytime'],
+    people: 2,
+    optionsCount: 200,
+    minGuests: 1,
+    maxGuests: 10,
+    durationHours: 1.5,
+    chefName: 'Chef Anna',
+    sampleMenu: ['Pizza dough', 'Margherita', 'Pepperoni', 'Dessert pizza'],
+    isOnline: true,
   },
   {
     id: 6,
@@ -107,8 +181,31 @@ export const staticMeals = [
     rating: 4.8,
     reviewsCount: 167,
     tags: ['Mexican', 'Tacos'],
+    description: '¡Olé! A festive Mexican cooking class—tacos, salsas, margaritas and more. A flavorful journey perfect for celebrations and gatherings.',
+    whyTheyLoveIt: ['Authentic Mexican techniques', 'BYOB-friendly classes', 'Perfect for groups & parties', 'Recipes to spice up every dinner'],
+    people: 4,
+    optionsCount: 90,
+    minGuests: 2,
+    maxGuests: 12,
+    durationHours: 2,
+    chefName: 'Chef Maria',
+    sampleMenu: ['Street tacos', 'Guacamole', 'Salsas', 'Churros'],
+    isOnline: false,
   },
 ];
+
+/** Static sample dates for booking form (demo) */
+export const sampleBookingDates = [
+  { id: '1', label: 'Sat, Mar 15 · 11:00 AM', value: '2025-03-15' },
+  { id: '2', label: 'Sun, Mar 16 · 2:00 PM', value: '2025-03-16' },
+  { id: '3', label: 'Fri, Mar 21 · 6:00 PM', value: '2025-03-21' },
+  { id: '4', label: 'Sat, Mar 22 · 10:00 AM', value: '2025-03-22' },
+  { id: '5', label: 'Sun, Mar 23 · 3:00 PM', value: '2025-03-23' },
+];
+
+export function getMealBySlug(slug: string): MealProfile | undefined {
+  return staticMeals.find((m) => m.slug === slug);
+}
 
 export const sliderItems = [
   { id: 1, title: 'New York', description: '', image: 'https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,w_680,h_456,f_auto,q_auto/v1767901770/foodie/hero/NYC-foodie-gifts.jpg' },
@@ -179,6 +276,29 @@ export const whyLoveUs = [
   { title: 'Direct to inbox', desc: 'e-Gifts sent instantly or scheduled' },
   { title: 'Hand-picked', desc: 'Top-rated chef partners nationwide' },
   { title: 'Best value', desc: 'Competitive pricing on every experience' },
+];
+
+export const mealProfileFaqItems = [
+  {
+    question: 'How does the voucher work?',
+    answer: 'Each voucher lets the recipient choose one experience from a curated collection. They browse available options, pick their favorite, and schedule it at a time that works for them.',
+  },
+  {
+    question: 'How long is it valid?',
+    answer: 'Cozymeal vouchers never expire, giving the recipient the freedom to choose and enjoy their experience at their convenience.',
+  },
+  {
+    question: 'What types of experiences are included?',
+    answer: 'Each voucher includes a variety of cooking class experiences. The exact options depend on the location or theme, offering something for everyone.',
+  },
+  {
+    question: 'How do they redeem it?',
+    answer: 'The recipient redeems their voucher online by entering their unique code. From there, they explore the collection and select their desired experience.',
+  },
+  {
+    question: 'When does the recipient choose the experience?',
+    answer: 'The recipient chooses after receiving the voucher, allowing them to pick something that matches their preferences and schedule.',
+  },
 ];
 
 export const faqItems = [

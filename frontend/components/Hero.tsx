@@ -1,78 +1,39 @@
-'use client';
-
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { heroSlides, promoBadges } from '@/lib/gifts-for-foodies-data';
+import { heroBackgroundImage } from '@/lib/home-page-data';
 
 export function Hero() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const t = setInterval(() => setActiveIndex((i) => (i + 1) % heroSlides.length), 5000);
-    return () => clearInterval(t);
-  }, []);
-
-  const slide = heroSlides[activeIndex];
-
   return (
-    <section className="relative">
-      <div className="relative w-full aspect-[16/5] min-h-[280px] max-h-[450px] bg-cozy-gray-800 overflow-hidden">
-        {heroSlides.map((s, i) => (
-          <div
-            key={s.id}
-            className={`absolute inset-0 transition-opacity duration-700 ${
-              i === activeIndex ? 'opacity-100 z-0' : 'opacity-0 pointer-events-none z-0'
-            }`}
-          >
-            <img
-              src={s.image}
-              alt=""
-              className="absolute inset-0 w-full h-full object-cover"
-              loading={i === 0 ? 'eager' : 'lazy'}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
-          </div>
-        ))}
-        <div className="absolute inset-0 z-10 flex items-center">
-          <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-xl">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
-                {slide.title}
-              </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-6">
-                {slide.subtitle}
-              </p>
-              <Link
-                href={slide.href}
-                className="inline-block px-6 py-3 bg-cozy-orange hover:bg-cozy-orange-dark text-white font-semibold rounded-lg transition-colors"
-              >
-                {slide.cta}
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
-          {heroSlides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setActiveIndex(i)}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                i === activeIndex ? 'bg-white' : 'bg-white/50 hover:bg-white/80'
-              }`}
-              aria-label={`Slide ${i + 1}`}
-            />
-          ))}
-        </div>
-      </div>
-      <div className="bg-white border-b border-cozy-gray-200 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm text-cozy-gray-600">
-            {promoBadges.map((badge) => (
-              <span key={badge} className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                {badge}
-              </span>
-            ))}
+    <section className="relative rounded-xl overflow-hidden mb-12 group">
+      <div
+        className="aspect-[21/9] w-full bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%), url('${heroBackgroundImage}')`,
+        }}
+      >
+        <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-16 text-white">
+          <span className="bg-primary/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold w-fit mb-4 uppercase tracking-wider">
+            Limited Time Offers Available
+          </span>
+          <h1 className="text-3xl md:text-6xl font-extrabold leading-[1.1] mb-6 max-w-2xl">
+            Unforgettable Food <br />
+            <span className="text-primary italic">Experiences</span>
+          </h1>
+          <p className="text-base md:text-xl text-slate-200 mb-8 max-w-lg">
+            Discover and gift the world&apos;s most unique culinary masterclasses, tastings, and private chef experiences.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="/gifts-for-foodies"
+              className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold transition-all shadow-lg shadow-primary/20 flex items-center gap-2"
+            >
+              Explore Now <span className="material-symbols-outlined">arrow_forward</span>
+            </Link>
+            <Link
+              href="#flash-sales"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold transition-all"
+            >
+              View Flash Sales
+            </Link>
           </div>
         </div>
       </div>

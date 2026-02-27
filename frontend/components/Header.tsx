@@ -18,7 +18,7 @@ const subNav = [
 
 export function Header() {
   const [locationOpen, setLocationOpen] = useState(false);
-  const [expandedRegions, setExpandedRegions] = useState<Set<string>>(new Set());
+  const [expandedRegion, setExpandedRegion] = useState<string | null>(null);
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const clearCloseTimeout = useCallback(() => {
@@ -38,12 +38,7 @@ export function Header() {
   }, []);
 
   const toggleRegion = useCallback((region: string) => {
-    setExpandedRegions((prev) => {
-      const next = new Set(prev);
-      if (next.has(region)) next.delete(region);
-      else next.add(region);
-      return next;
-    });
+    setExpandedRegion((prev) => (prev === region ? null : region));
   }, []);
 
   return (
@@ -139,63 +134,94 @@ export function Header() {
           </div>
         </div>
 
-        {/* Full-width dropdown: absolute under sub-nav, scrolls with header */}
+        {/* Full-width dropdown: 5 independent columns, cities inline under region */}
         {locationOpen && (
           <div
             className="absolute left-0 right-0 top-full z-50 pt-1"
             onMouseEnter={clearCloseTimeout}
           >
             <div className="bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-700 shadow-xl py-5 px-4 md:px-10 lg:px-20">
-              <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-4">
-                  {locationMenuRegions.map(({ region, cities }) => {
-                    const isExpanded = expandedRegions.has(region);
-                    return (
-                      <div key={region} className="min-w-0">
-                        <button
-                          type="button"
-                          onClick={() => toggleRegion(region)}
-                          className="w-full flex items-center justify-between gap-2 text-left text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider py-1.5 hover:text-primary transition-colors"
-                        >
-                          <span>{region}</span>
-                          <span className="text-primary text-lg leading-none shrink-0" aria-expanded={isExpanded}>
-                            {isExpanded ? '−' : '+'}
-                          </span>
-                        </button>
-                        {isExpanded && (
-                          <ul className="space-y-1.5 mt-2 pb-2">
-                            {cities.map((city) => (
-                              <li key={city}>
-                                <Link
-                                  href="#"
-                                  className="text-sm text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
+              <div className="max-w-7xl mx-auto flex gap-8">
+                {(() => {
+                  const cols = 5;
+                  const perCol = Math.ceil(locationMenuRegions.length / cols);
+                  const columns: typeof locationMenuRegions[] = [];
+                  for (let c = 0; c < cols; c++) {
+                    columns.push(locationMenuRegions.slice(c * perCol, (c + 1) * perCol));
+                  }
+                  return columns.map((columnRegions, colIndex) => (
+                    <div
+                      key={colIndex}
+                      className="min-w-0 flex-1 flex flex-col max-h-[360px] overflow-y-auto"
+                    >
+                      {columnRegions.map(({ region, cities }) => {
+                        const hasSubmenu = cities.length > 0;
+                        const isExpanded = expandedRegion === region;
+                        return (
+                          <div key={region} className="shrink-0">
+                            {hasSubmenu ? (
+                              <>
+                                <button
+                                  type="button"
+                                  onClick={() => toggleRegion(region)}
+                                  className={`w-full flex items-center justify-between gap-2 text-left text-xs font-bold uppercase tracking-wider py-1.5 pr-0 transition-colors ${
+                                    isExpanded
+                                      ? 'text-primary bg-slate-100 dark:bg-slate-800'
+                                      : 'text-slate-900 dark:text-white hover:text-primary'
+                                  }`}
                                 >
-                                  {city}
-                                </Link>
-                              </li>
-                            ))}
-                            <li>
+                                  <span className="truncate">{region}</span>
+                                  <span className="text-primary text-lg leading-none shrink-0" aria-expanded={isExpanded}>
+                                    {isExpanded ? '−' : '+'}
+                                  </span>
+                                </button>
+                                {isExpanded && (
+                                  <ul className="space-y-1 pl-2 pb-2 border-l-2 border-primary/20 ml-0.5">
+                                    {cities.map((city) => (
+                                      <li key={city}>
+                                        <Link
+                                          href="#"
+                                          className="text-sm text-slate-600 dark:text-slate-300 hover:text-primary transition-colors"
+                                        >
+                                          {city}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                    <li className="pt-1">
+                                      <Link
+                                        href="#"
+                                        className="text-sm font-semibold text-primary hover:underline"
+                                      >
+                                        View all {region}
+                                      </Link>
+                                    </li>
+                                  </ul>
+                                )}
+                              </>
+                            ) : (
                               <Link
                                 href="#"
-                                className="text-sm font-semibold text-primary hover:underline"
+                                className="block w-full text-xs font-bold uppercase tracking-wider py-1.5 text-slate-900 dark:text-white hover:text-primary transition-colors"
                               >
-                                View all {region}
+                                {region}
                               </Link>
-                            </li>
-                          </ul>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-                <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 flex flex-wrap gap-4">
-                  <Link href="#" className="text-sm font-semibold text-primary hover:underline">
-                    At Home / Virtual
-                  </Link>
-                  <Link href="#" className="text-sm font-semibold text-primary hover:underline">
-                    All Locations
-                  </Link>
-                </div>
+                            )}
+                          </div>
+                        );
+                      })}
+                      {colIndex === cols - 1 && (
+                        <div className="mt-2 pt-2 border-t border-slate-100 dark:border-slate-700 space-y-1 shrink-0">
+                          <Link href="#" className="block text-sm font-semibold text-primary hover:underline">
+                            At Home / Virtual
+                          </Link>
+                          <Link href="#" className="block text-sm font-semibold text-primary hover:underline">
+                            All Experiences
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                  ));
+                })()}
               </div>
             </div>
           </div>
